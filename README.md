@@ -1,0 +1,2 @@
+# janken
+Ranked jankenpon
