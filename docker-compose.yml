@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  janken-db:
+    image: postgres:16-alpine
+    container_name: janken-db
+    environment:
+      POSTGRES_USER: janken-service
+      POSTGRES_PASSWORD: pass123
+      POSTGRES_DB: janken-service-db
+    volumes:
+      - janken_pg_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+volumes:
+  janken_pg_data:
+
